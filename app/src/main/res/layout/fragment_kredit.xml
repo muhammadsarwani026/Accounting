@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.uts.jrmdhn.accounting.FragmentKredit">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/saldo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_gravity="end"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Kredit"/>
+        <TextView
+            android:layout_gravity="end"
+            android:id="@+id/tvTotalkre"
+            android:textSize="16pt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12000"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/saldo"
+        android:id="@+id/llLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transaksi"
+            android:layout_alignParentLeft="true"/>
+        <LinearLayout
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textStyle="bold"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:text="Debet"
+                android:gravity="right"/>
+            <TextView
+                android:textStyle="bold"
+                android:id="@+id/labelKredit"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:text="Kredit"
+                android:gravity="right"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ListView
+        android:layout_below="@id/llLabel"
+        android:layout_weight="0.9"
+        android:id="@+id/listMember"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+</RelativeLayout>

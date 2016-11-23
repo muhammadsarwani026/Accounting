@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.uts.jrmdhn.accounting.TambahTransaksi">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.design.widget.CoordinatorLayout
+                android:id="@+id/topBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.design.widget.AppBarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/AppTheme.AppBarOverlay">
+                    <android.support.v7.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="?attr/colorPrimary"
+                        app:layout_scrollFlags="scroll|enterAlways"
+                        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+                </android.support.design.widget.AppBarLayout>
+            </android.support.design.widget.CoordinatorLayout>
+
+            <RelativeLayout
+                android:padding="@dimen/activity_horizontal_margin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true">
+                <android.support.v7.widget.CardView
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="2dp"
+                    android:layout_centerInParent="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingRight="@dimen/activity_horizontal_margin"
+                        android:paddingLeft="@dimen/activity_horizontal_margin"
+                        android:paddingBottom="@dimen/activity_vertical_margin"
+                        android:paddingTop="@dimen/activity_vertical_margin">
+
+                        <LinearLayout
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:layout_width="0px"
+                            android:layout_height="0px"/>
+                        <TextView
+                            android:textColor="@android:color/black"
+                            android:layout_marginTop="@dimen/activity_vertical_margin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tanggal Transaksi:"/>
+                        <EditText
+                            android:focusable="false"
+                            android:id="@+id/etTanggal"
+                            android:imeOptions="actionNext"
+                            android:singleLine="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:textColor="@android:color/black"
+                            android:layout_marginTop="@dimen/activity_vertical_margin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Jenis Transaksi:"/>
+                        <RadioGroup
+                            android:id="@+id/rgTransaksi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <RadioButton
+                                android:id="@+id/radioDebet"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Transaksi Debet"/>
+                            <RadioButton
+                                android:id="@+id/radioKredit"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Transaksi Kredit"/>
+                        </RadioGroup>
+
+                        <TextView
+                            android:layout_marginTop="@dimen/activity_vertical_margin"
+                            android:textColor="@android:color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Jurnal Transaksi:"/>
+                        <EditText
+                            android:singleLine="true"
+                            android:imeOptions="actionNext"
+                            android:id="@+id/etJurnal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:textColor="@android:color/black"
+                            android:layout_marginTop="@dimen/activity_vertical_margin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nominal:"/>
+
+                        <EditText
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal"
+                            android:singleLine="true"
+                            android:id="@+id/etNominal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+
+
+                        <TextView
+                            android:textColor="@android:color/black"
+                            android:layout_marginTop="@dimen/activity_vertical_margin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Keterangan:"/>
+
+                        <EditText
+                            android:id="@+id/etKeterangan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <Button
+                            android:id="@+id/btnSubmitBaru"
+                            android:layout_marginTop="65dp"
+                            android:text="Tambah Transaksi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimary"
+                            android:textColor="@android:color/white"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp">
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
